@@ -5,11 +5,16 @@
         mat-icon-button
         class="example-icon"
         aria-label="Example icon-button with menu icon"
+        (click)="drawer.toggle()"
       >
         <mat-icon>menu</mat-icon>
       </button>
-      <button mat-icon-button class="example-icon favorite-icon">
-        <mat-icon>mail</mat-icon>
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        [routerLink]="['applicants']"
+      >
+        <mat-icon>receipt_long</mat-icon>
       </button>
       <span class="example-spacer"></span>
       <button mat-icon-button class="example-icon favorite-icon">
@@ -67,8 +72,47 @@
         </div>
       </nav>
     </div>
-    <div class="content-div">
-      <div class="content">This is new</div>
-    </div>
+    <mat-drawer-container autosize>
+      <mat-drawer #drawer opened="false" mode="side" position="start">
+        <mat-nav-list>
+          <div class="customize-btn">
+            <button mat-button [routerLink]="['new-application']">
+              <mat-icon>edit</mat-icon> Customize
+            </button>
+          </div>
+          <mat-list-item>
+            <button routerLink="" mat-button>
+              <mat-icon>home</mat-icon> Home
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button routerLink="" mat-button>
+              <mat-icon>explore</mat-icon> Slider
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button routerLink="" mat-button>
+              <mat-icon>table</mat-icon> Table
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>settings</mat-icon> Settings</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>help</mat-icon> Help</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>analytics</mat-icon> Analytics</button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-drawer>
+      <mat-drawer-content>
+        <div class="content-div">
+          <div class="content">
+            <router-outlet />
+          </div>
+        </div>
+      </mat-drawer-content>
+    </mat-drawer-container>
   </div>
 </div>
