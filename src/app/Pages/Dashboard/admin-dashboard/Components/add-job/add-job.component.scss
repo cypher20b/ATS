@@ -2,18 +2,25 @@
     margin: 2rem;
     .left-form{
       margin: 1rem;
+      width: 50%,
     }
     .right-form{
-      margin: 1rem
+      width: 50%;
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .example-form {        
+    .example-form, .select-form {        
         width: 100%;
       }
       
       .full-width, .date {
         width: 100%;
       }
-      
      
+     .for-margin{
+     width: 48%;
+     }
 }
