@@ -4,7 +4,7 @@ import {
   MatRippleLoader,
   MatRippleModule,
   Platform
-} from "./chunk-7JXJRWQM.js";
+} from "./chunk-UMTWXQIW.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
@@ -19,8 +19,6 @@ import {
   NgZone,
   Optional,
   ViewEncapsulation$1,
-  __spreadProps,
-  __spreadValues,
   booleanAttribute,
   inject,
   numberAttribute,
@@ -42,7 +40,11 @@ import {
   ɵɵinvalidFactory,
   ɵɵprojection,
   ɵɵprojectionDef
-} from "./chunk-RTCNTTZJ.js";
+} from "./chunk-AYX6XRY7.js";
+import {
+  __spreadProps,
+  __spreadValues
+} from "./chunk-YBO3JQB4.js";
 
 // node_modules/@angular/material/fesm2022/button.mjs
 var _c0 = ["mat-button", ""];
@@ -1193,4 +1195,4 @@ export {
   MatIconAnchor,
   MatButtonModule
 };
-//# sourceMappingURL=chunk-QY3Y4ZBS.js.map
+//# sourceMappingURL=chunk-2E46VSPT.js.map

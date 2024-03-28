@@ -6,10 +6,9 @@
     }
     .right-form{
       width: 50%;
+      
       margin: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      
     }
 
     .example-form, .select-form {        
@@ -22,5 +21,22 @@
      
      .for-margin{
      width: 48%;
+    
      }
 }
+
+::ng-deep .ck-content {
+  height: 6.3rem;
+}
+label{
+  color: #b0b0b0;
+}
+.job-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95%;
+}
+.contact{
+  margin-left: 1.5rem;
+ }

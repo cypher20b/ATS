@@ -5,6 +5,8 @@ import { FormsModule } from "@angular/forms";
 import { provideNativeDateAdapter } from "@angular/material/core";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatSelectModule } from "@angular/material/select";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { CKEditorModule } from "@ckeditor/ckeditor5-angular";
 
 interface Job {
   value: string;
@@ -20,12 +22,15 @@ interface Job {
     MatFormFieldModule,
     MatDatepickerModule,
     MatSelectModule,
+    CKEditorModule,
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: "./add-job.component.html",
   styleUrl: "./add-job.component.scss",
 })
 export class AddJobComponent {
+  public Editor = ClassicEditor;
+
   contractType: Job[] = [
     { value: "full-time", viewValue: "Full time" },
     { value: "part-time", viewValue: "Part time" },
