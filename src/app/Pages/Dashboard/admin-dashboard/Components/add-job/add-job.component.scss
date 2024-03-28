@@ -5,9 +5,11 @@
       width: 50%,
     }
     .right-form{
-      width: 50%;
-      
+      width: 50%;      
       margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       
     }
 
@@ -35,8 +37,11 @@ label{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 95%;
+ 
 }
 .contact{
   margin-left: 1.5rem;
+ }
+ .requirements{
+  margin-bottom: 1.5rem;
  }

@@ -11,6 +11,10 @@
           <mat-label>Company </mat-label>
           <input matInput placeholder="Google" />
         </mat-form-field>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Job Description</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
 
         <div class="full-width d-flex justify-content-between form-group">
           <mat-form-field class="for-margin" appearance="outline">
@@ -74,28 +78,28 @@
     </div>
     <div class="right-form form-group">
       <div class="job-description">
-        <div class="full-width form-control" appearance="outline">
-          <label>Job Description</label>
-          <ckeditor [editor]="Editor"></ckeditor>
-        </div>
-        <div class="full-width form-control" appearance="outline">
+        <div class="full-width form-control requirements" appearance="outline">
           <label>Job Requirements</label>
           <ckeditor [editor]="Editor"></ckeditor>
         </div>
+        <div class="full-width form-control" appearance="outline">
+          <label>Job Responsibilities</label>
+          <ckeditor [editor]="Editor"></ckeditor>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="contact-infomation">
-    <div class="contact-info d-flex justify-content-end">
-      <mat-form-field class="for-margin" appearance="outline">
-        <mat-label>Contact Email:</mat-label>
-        <input type="email" matInput placeholder="example@xyz.com" />
-      </mat-form-field>
+      <div class="contact-infomation">
+        <div class="contact-info d-flex justify-content-end">
+          <mat-form-field class="for-margin" appearance="outline">
+            <mat-label>Contact Email:</mat-label>
+            <input type="email" matInput placeholder="example@xyz.com" />
+          </mat-form-field>
 
-      <mat-form-field class="for-margin contact" appearance="outline">
-        <mat-label>Contact Phone:</mat-label>
-        <input matInput type="tel" placeholder="0123456789" />
-      </mat-form-field>
+          <mat-form-field class="for-margin contact" appearance="outline">
+            <mat-label>Contact Phone:</mat-label>
+            <input matInput type="tel" placeholder="0123456789" />
+          </mat-form-field>
+        </div>
+      </div>
     </div>
   </div>
 </form>
