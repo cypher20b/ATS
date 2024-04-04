@@ -3,6 +3,7 @@ import { AdminDashboardComponent } from "./Pages/Dashboard/admin-dashboard/admin
 import { AddJobComponent } from "./Pages/Dashboard/admin-dashboard/Components/add-job/add-job.component";
 import { ApplicantsListComponent } from "./Pages/Dashboard/admin-dashboard/Components/applicants-list/applicants-list.component";
 import { SignUpComponent } from "./Pages/Authentication/sign-up/sign-up.component";
+import { LoginComponent } from "./Pages/Authentication/login/login.component";
 
 export const routes: Routes = [
   {
@@ -14,5 +15,7 @@ export const routes: Routes = [
       { path: "applicants", component: ApplicantsListComponent },
     ],
   },
-  { path: "", component: SignUpComponent },
+  { path: "", component: LoginComponent },
+  { path: "sign-up", component: SignUpComponent },
+  { path: "login", component: LoginComponent },
 ];

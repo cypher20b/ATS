@@ -14,7 +14,7 @@
       </div>
       <div class="side-image">
         <img
-          src="assets\images\Man-working-on-laptop.svg"
+          src="assets\images\sign-up-image.svg"
           alt="Main on a laptop"
           class="man-with"
         />
@@ -24,13 +24,34 @@
       <form action="" method="post">
         <div class="input-forms">
           <div class="input-heading">
-            <h3 class="form-name">Login</h3>
+            <h3 class="form-name">Sign Up</h3>
             <p class="form-paragraph">
-              Welcome back. Enter your details to open your account. Don’t have
-              an account yet, <a href="">create account</a> .
+              Create new account by providing your details below.
             </p>
           </div>
           <div class="input-fills">
+            <div class="mb-3 d-flex justify-content-between">
+              <div class="firstname-div">
+                <label for="firstname" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="John"
+                />
+              </div>
+              <div class="lastname-div">
+                <label for="lastname" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Doe"
+                />
+              </div>
+            </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input
@@ -50,19 +71,54 @@
                   id="password"
                   placeholder="Enter your password"
                 />
-                <button mat-icon-button (click)="hide = !hide">
+                <button type="button" mat-icon-button (click)="hide = !hide">
                   <mat-icon>{{
                     hide ? "visibility_off" : "visibility"
                   }}</mat-icon>
                 </button>
               </div>
             </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input
+                type="phone"
+                class="form-control"
+                id="phone"
+                name="phone"
+                placeholder="+2332525252"
+              />
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+              <div class="department-div">
+                <label for="department" class="form-label">Department</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="department"
+                  name="department"
+                  placeholder="Management"
+                />
+              </div>
+              <div class="role-div">
+                <label for="specialty" class="form-label">Role</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="specialty"
+                  name="specialty"
+                  placeholder="Angular"
+                />
+              </div>
+            </div>
           </div>
           <div class="forget-div">
             <mat-checkbox class="remember-me">Remember Me</mat-checkbox>
-            <a href="" class="forget-password">Forgotten Password</a>
+            <a class="forget-password">Forgotten Password</a>
           </div>
-          <a class="form-control login-button">LOGIN</a>
+          <a class="form-control signup-button">Sign Up</a>
+          <div class="already-member">
+            Already have an Account? <a [routerLink]="['/login']">Log In</a>
+          </div>
         </div>
       </form>
     </div>

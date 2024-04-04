@@ -7,7 +7,7 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { Router, RouterModule } from "@angular/router";
 
 @Component({
-  selector: "app-sign-up",
+  selector: "app-login",
   standalone: true,
   imports: [
     MatFormFieldModule,
@@ -17,9 +17,9 @@ import { Router, RouterModule } from "@angular/router";
     MatCheckboxModule,
     RouterModule,
   ],
-  templateUrl: "./sign-up.component.html",
-  styleUrl: "./sign-up.component.scss",
+  templateUrl: "./login.component.html",
+  styleUrl: "./login.component.scss",
 })
-export class SignUpComponent {
+export class LoginComponent {
   hide = true;
 }
