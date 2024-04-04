@@ -1,1 +1,63 @@
-<p>sign-up works!</p>
+<div class="main-container">
+  <div class="inner-div d-flex">
+    <div class="left-bar">
+      <div class="top-heading d-flex">
+        <img src="assets\icons\Logo.svg" alt="" />
+        <div class="ats-name">ATS.io</div>
+      </div>
+      <div class="article">
+        <h5 class="article-heading">Simplify your recruitment process</h5>
+        <p class="article-paragraph">
+          With our user-friendly app, you'll streamline recruitment process,
+          boost collaboration, and drive success
+        </p>
+      </div>
+      <div class="side-image">
+        <img
+          src="assets\images\Man-working-on-laptop.svg"
+          alt="Main on a laptop"
+          class="man-with"
+        />
+      </div>
+    </div>
+    <div class="right-bar">
+      <div class="input-forms">
+        <div class="input-heading">
+          <h3 class="form-name">Login</h3>
+          <p class="form-paragraph">
+            Welcome back. Enter your details to open your account. Don’t have an
+            account yet, <a href="">create account</a> .
+          </p>
+        </div>
+        <div class="input-fills">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <div class="password-input form-control">
+              <input
+                [type]="hide ? 'password' : 'text'"
+                name="password"
+                id="password"
+                placeholder="Enter your password"
+              />
+              <button mat-icon-button (click)="hide = !hide">
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

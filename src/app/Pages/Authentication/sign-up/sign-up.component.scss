@@ -1,0 +1,72 @@
+.main-container{ 
+   
+    height: 100vh;
+    overflow: hidden;
+    .inner-div{
+    margin: 2rem 1.5rem;
+    background-color: yellow;
+    height: 90%;
+    .left-bar{
+        width: 25%;
+        height: 100%;
+        padding-top: 2rem;
+        border-radius: 16px;
+        background: #1F26A8;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        .man-with{   
+            height: 100%;
+            width: 100%;   
+        }
+        .top-heading{
+            margin-left: 1rem;
+
+            .ats-name{
+                color: var(--Colors-Base-00, #FFF);
+                font-family: "Inknut Antiqua";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; /* 100% */
+                margin-left: 0.5rem;
+            }
+        }
+        .article{
+            .article-heading{
+                color:  #FFF;
+                font-family: Lexend;
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 40px; 
+            }
+            .article-paragraph{
+                color:  #FFF;
+                font-family: Lexend;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px; 
+            }
+        }
+
+    }
+    .right-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        width: 75%;
+        .password-input{
+            display: flex;
+            align-items: center;
+            input{
+                outline: none;
+                border: none;
+            }
+        }
+    }
+    }
+}
