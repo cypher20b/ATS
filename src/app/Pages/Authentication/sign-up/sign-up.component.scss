@@ -4,7 +4,6 @@
     overflow: hidden;
     .inner-div{
     margin: 2rem 1.5rem;
-    background-color: yellow;
     height: 90%;
     .left-bar{
         width: 25%;
@@ -56,17 +55,103 @@
     .right-bar{
         display: flex;
         justify-content: center;
-        align-items: center;
-        background-color: red;
+        align-items: center;     
         width: 75%;
+        .input-forms{
+            width: 30rem;
+            label{
+                color: #3D4A5C;
+                font-family: Lexend;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; 
+
+            }
+            input::placeholder{
+                color: var(--Colors-Primary-Slate-500, #5E718D);
+                font-family: Lexend;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; 
+            }
+            .input-heading{
+                .form-name{
+                    color: #3D4A5C;
+                    font-family: Lexend;
+                    font-size: 36px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 40px;
+
+                }
+                .form-paragraph{
+                    color: var(--Colors-Primary-Slate-700, #3D4A5C);
+                    font-family: Lexend;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px; 
+
+                }
+            }
+            .form-control{
+                border-radius: 16px;
+                border: 1px solid  #9AA8BC;
+            }
+            .forget-div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .remember-me{
+                    color: var(--Colors-Primary-Primary-600, #0F3CD9);
+                    font-family: Lexend;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px; 
+                }
+
+                .forget-password{
+                    color: var(--Colors-Primary-Primary-600, #0F3CD9);
+                    font-family: Lexend;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 20px;
+
+                }
+
+            }
+            .login-button{
+                text-align: center;
+                text-decoration: none;
+                color: var(--White, #FFF);
+                font-family: Lexend;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px; /* 150% */
+                background-color: #1F26A8;
+            }
+           
+        }
         .password-input{
             display: flex;
             align-items: center;
+            justify-content: space-between;
             input{
                 outline: none;
                 border: none;
             }
+            button{
+                padding: 0;
+                margin: 0;
+                height: 1.5rem;
+            }
         }
     }
     }
+    
 }

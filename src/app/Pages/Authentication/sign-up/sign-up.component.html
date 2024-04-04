@@ -21,43 +21,50 @@
       </div>
     </div>
     <div class="right-bar">
-      <div class="input-forms">
-        <div class="input-heading">
-          <h3 class="form-name">Login</h3>
-          <p class="form-paragraph">
-            Welcome back. Enter your details to open your account. Don’t have an
-            account yet, <a href="">create account</a> .
-          </p>
-        </div>
-        <div class="input-fills">
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              placeholder="name@example.com"
-            />
+      <form action="" method="post">
+        <div class="input-forms">
+          <div class="input-heading">
+            <h3 class="form-name">Login</h3>
+            <p class="form-paragraph">
+              Welcome back. Enter your details to open your account. Don’t have
+              an account yet, <a href="">create account</a> .
+            </p>
           </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <div class="password-input form-control">
+          <div class="input-fills">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
               <input
-                [type]="hide ? 'password' : 'text'"
-                name="password"
-                id="password"
-                placeholder="Enter your password"
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
               />
-              <button mat-icon-button (click)="hide = !hide">
-                <mat-icon>{{
-                  hide ? "visibility_off" : "visibility"
-                }}</mat-icon>
-              </button>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <div class="password-input form-control">
+                <input
+                  [type]="hide ? 'password' : 'text'"
+                  name="password"
+                  id="password"
+                  placeholder="Enter your password"
+                />
+                <button mat-icon-button (click)="hide = !hide">
+                  <mat-icon>{{
+                    hide ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </button>
+              </div>
             </div>
           </div>
+          <div class="forget-div">
+            <mat-checkbox class="remember-me">Remember Me</mat-checkbox>
+            <a href="" class="forget-password">Forgotten Password</a>
+          </div>
+          <a class="form-control login-button">LOGIN</a>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
