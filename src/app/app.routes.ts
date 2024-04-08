@@ -10,7 +10,7 @@ export const routes: Routes = [
     path: "dashboard",
     component: AdminDashboardComponent,
     children: [
-      // { path: '', component: MerchantProductsComponent },
+      { path: "", component: ApplicantsListComponent },
       { path: "new-application", component: AddJobComponent },
       { path: "applicants", component: ApplicantsListComponent },
     ],

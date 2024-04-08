@@ -27,7 +27,7 @@
   </div>
   <div class="main-bar">
     <div class="nav-main">
-      <nav class="navbar bg-body-tertiary d-flex justify-content-between">
+      <nav class="navbar d-flex justify-content-between">
         <div class="application-name">
           <a class="navbar-brand" href="#">
             <img
@@ -37,13 +37,9 @@
               height="24"
               class="d-inline-block align-text-top"
             />
-            Application
           </a>
         </div>
         <div class="search-bar d-flex align-items-center">
-          <button mat-icon-button class="example-icon">
-            <mat-icon>search</mat-icon>
-          </button>
           <input
             class="search-input"
             type="text"
@@ -51,8 +47,8 @@
             id=""
             placeholder="Search"
           />
-          <button mat-icon-button class="example-icon">
-            <mat-icon>tune</mat-icon>
+          <button mat-icon-button class="nav-search-icon">
+            <mat-icon>search</mat-icon>
           </button>
         </div>
         <div class="user-info d-flex align-items-center">
@@ -63,7 +59,7 @@
             <mat-icon>apps</mat-icon>
           </button>
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFqno-o15uF8Ewt3FiPFhfHFZXspX9y9teNZt-xvdNrfxVUGvoSoZgj0bnlcAtKWlPb88&usqp=CAU"
+            src="assets\images\dashboard-picture.jpg"
             alt="Logo"
             width="30"
             height="24"
@@ -81,19 +77,13 @@
             </button>
           </div>
           <mat-list-item>
-            <button routerLink="" mat-button>
-              <mat-icon>home</mat-icon> Home
-            </button>
+            <button mat-button><mat-icon>home</mat-icon> Home</button>
           </mat-list-item>
           <mat-list-item>
-            <button routerLink="" mat-button>
-              <mat-icon>explore</mat-icon> Slider
-            </button>
+            <button mat-button><mat-icon>explore</mat-icon> Slider</button>
           </mat-list-item>
           <mat-list-item>
-            <button routerLink="" mat-button>
-              <mat-icon>table</mat-icon> Table
-            </button>
+            <button mat-button><mat-icon>table</mat-icon> Table</button>
           </mat-list-item>
           <mat-list-item>
             <button mat-button><mat-icon>settings</mat-icon> Settings</button>
