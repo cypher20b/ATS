@@ -5,6 +5,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { Router, RouterModule } from "@angular/router";
+import { CommonModule } from "@angular/common";
 
 @Component({
   selector: "app-sign-up",
@@ -16,6 +17,7 @@ import { Router, RouterModule } from "@angular/router";
     MatIconModule,
     MatCheckboxModule,
     RouterModule,
+    CommonModule,
   ],
   templateUrl: "./sign-up.component.html",
   styleUrl: "./sign-up.component.scss",

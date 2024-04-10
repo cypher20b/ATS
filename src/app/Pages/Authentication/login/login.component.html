@@ -21,7 +21,11 @@
       </div>
     </div>
     <div class="right-bar">
-      <form action="" method="post">
+      <form
+        #adminLoginForm="ngForm"
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit(adminLoginForm)"
+      >
         <div class="input-forms">
           <div class="input-heading">
             <h3 class="form-name">Login</h3>
@@ -39,6 +43,7 @@
                 class="form-control"
                 id="email"
                 name="email"
+                formControlName="email"
                 placeholder="name@example.com"
               />
             </div>
@@ -50,6 +55,7 @@
                   [type]="hide ? 'password' : 'text'"
                   name="password"
                   id="password"
+                  formControlName="password"
                   placeholder="Enter your password"
                 />
                 <button mat-icon-button (click)="hide = !hide">
@@ -64,7 +70,10 @@
             <mat-checkbox class="remember-me">Remember Me</mat-checkbox>
             <a href="" class="forget-password">Forgotten Password</a>
           </div>
-          <a class="form-control login-button">Log In</a>
+
+          <button type="submit" class="form-control login-button">
+            <a class="">Log In</a>
+          </button>
         </div>
       </form>
     </div>

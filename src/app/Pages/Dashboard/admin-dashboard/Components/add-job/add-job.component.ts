@@ -1,7 +1,12 @@
 import { Component } from "@angular/core";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { FormsModule } from "@angular/forms";
+import {
+  FormGroup,
+  FormGroupDirective,
+  FormsModule,
+  ReactiveFormsModule,
+} from "@angular/forms";
 import { provideNativeDateAdapter } from "@angular/material/core";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatSelectModule } from "@angular/material/select";
@@ -23,6 +28,7 @@ interface Job {
     MatDatepickerModule,
     MatSelectModule,
     CKEditorModule,
+    ReactiveFormsModule,
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: "./add-job.component.html",
@@ -30,6 +36,11 @@ interface Job {
 })
 export class AddJobComponent {
   public Editor = ClassicEditor;
+  postJob: FormGroup;
+
+  constructor() {
+    this.postJob = new FormGroup({});
+  }
 
   contractType: Job[] = [
     { value: "full-time", viewValue: "Full time" },
@@ -46,4 +57,6 @@ export class AddJobComponent {
     { value: "middle", viewValue: "Mid Senior Level" },
     { value: "senior", viewValue: "Senior Level" },
   ];
+
+  onSubmit(form: FormGroupDirective) {}
 }

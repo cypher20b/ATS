@@ -1,16 +1,14 @@
-<form action="" method="post">
+<form
+  action=""
+  [formGroup]="postJob"
+  #jobPosting="ngForm"
+  (ngSubmit)="onSubmit(jobPosting)"
+>
   <div class="main-container d-flex">
     <div class="left-form">
       <div class="example-form">
-        <div class="job-title-div mb-2">
-          <label for="job-title" class="form-label">Job Title</label>
-          <input
-            type="text"
-            class="form-control"
-            id="job-title"
-            name="job-title"
-            placeholder="Google"
-          />
+        <div class="new-application">
+          <h4 class="new-application-heading">New Application</h4>
         </div>
 
         <mat-form-field class="full-width company-div" appearance="outline">
@@ -19,7 +17,7 @@
         </mat-form-field>
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Job Description</mat-label>
-          <textarea matInput></textarea>
+          <input matInput placeholder="" />
         </mat-form-field>
 
         <div class="full-width d-flex justify-content-between form-group">
