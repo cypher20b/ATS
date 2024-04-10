@@ -10,47 +10,63 @@
         <div class="new-application">
           <h4 class="new-application-heading">New Application</h4>
         </div>
-
+        <mat-form-field class="full-width company-div" appearance="outline">
+          <mat-label>Job Title </mat-label>
+          <input
+            matInput
+            placeholder="Sofware Engineer"
+            formControlName="jobTitle"
+          />
+        </mat-form-field>
         <mat-form-field class="full-width company-div" appearance="outline">
           <mat-label>Company </mat-label>
-          <input matInput placeholder="Google" />
+          <input
+            matInput
+            placeholder="Google"
+            formControlName="jobCompanyName"
+          />
         </mat-form-field>
         <mat-form-field class="full-width" appearance="outline">
           <mat-label>Job Description</mat-label>
-          <input matInput placeholder="" />
+          <input matInput placeholder="" formControlName="jobDescription" />
         </mat-form-field>
 
         <div class="full-width d-flex justify-content-between form-group">
           <mat-form-field class="for-margin" appearance="outline">
             <mat-label>Location</mat-label>
-            <input matInput placeholder="Ghana" />
+            <input matInput placeholder="Ghana" formControlName="jobLocation" />
           </mat-form-field>
 
           <mat-form-field class="for-margin" appearance="outline">
             <mat-label>Category</mat-label>
-            <input matInput placeholder="Engineering" />
+            <input
+              matInput
+              placeholder="Engineering"
+              formControlName="jobCategory"
+            />
           </mat-form-field>
         </div>
 
         <div class="full-width d-flex justify-content-between form-group">
           <mat-form-field appearance="outline" class="for-margin">
-            <mat-label>Job Type:</mat-label>
-            <mat-select>
-              @for (job of jobType; track job) {
-              <mat-option [value]="job.value">{{ job.viewValue }}</mat-option>
-              }
-            </mat-select>
-          </mat-form-field>
-
-          <mat-form-field appearance="outline" class="for-margin">
             <mat-label>Contract Type:</mat-label>
-            <mat-select>
+            <mat-select formControlName="jobEmploymentType">
               @for (contract of contractType; track contract) {
               <mat-option [value]="contract.value">{{
                 contract.viewValue
               }}</mat-option>
               }
             </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="for-margin">
+            <mat-label>Salary:</mat-label>
+            <input
+              type="number"
+              matInput
+              placeholder="$2000"
+              formControlName="jobSalary"
+            />
           </mat-form-field>
         </div>
 
@@ -67,8 +83,16 @@
           <mat-form-field appearance="outline" class="for-margin">
             <mat-label>Enter a date range</mat-label>
             <mat-date-range-input [rangePicker]="picker">
-              <input matStartDate placeholder="Start date" />
-              <input matEndDate placeholder="End date" />
+              <input
+                matStartDate
+                placeholder="Start date"
+                formControlName="jobPostedDate"
+              />
+              <input
+                matEndDate
+                placeholder="End date"
+                formControlName="jobExpiryDate"
+              />
             </mat-date-range-input>
             <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle
@@ -84,26 +108,46 @@
       <div class="job-description">
         <div class="full-width form-control requirements" appearance="outline">
           <label>Job Requirements</label>
-          <ckeditor [editor]="Editor"></ckeditor>
+          <ckeditor
+            [editor]="Editor"
+            formControlName="jobRequirements"
+          ></ckeditor>
         </div>
         <div class="full-width form-control" appearance="outline">
           <label>Job Responsibilities</label>
-          <ckeditor [editor]="Editor"></ckeditor>
+          <ckeditor
+            [editor]="Editor"
+            formControlName="jobResponsibilities"
+          ></ckeditor>
         </div>
       </div>
       <div class="contact-infomation">
         <div class="contact-info d-flex justify-content-end">
           <mat-form-field class="for-margin" appearance="outline">
             <mat-label>Contact Email:</mat-label>
-            <input type="email" matInput placeholder="example@xyz.com" />
+            <input
+              type="email"
+              matInput
+              placeholder="example@xyz.com"
+              formControlName="jobContactEmail"
+            />
           </mat-form-field>
 
           <mat-form-field class="for-margin contact" appearance="outline">
             <mat-label>Contact Phone:</mat-label>
-            <input matInput type="tel" placeholder="0123456789" />
+            <input
+              matInput
+              type="tel"
+              placeholder="0123456789"
+              formControlName="jobContactPhone"
+            />
           </mat-form-field>
         </div>
       </div>
     </div>
+  </div>
+  <div class="submit-btn">
+    <mat-slide-toggle formControlName="jobActive">Active</mat-slide-toggle>
+    <button class="btn" [disabled]="!jobPosting.valid">Post Job</button>
   </div>
 </form>

@@ -24,7 +24,35 @@ export class ApiService {
       }
     );
   }
-  postJob()
-{
-  
-}}
+
+  adminSignUp(
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string,
+    designation: string,
+    specialty: string,
+    phone: string
+  ) {
+    return this.http.post<Response>(
+      "http://hcp.enterskull.com:9002/admin/register",
+      {
+        firstName,
+        lastName,
+        email,
+        password,
+        designation,
+        specialty,
+        phone,
+      }
+    );
+  }
+  postJob(jobData: any) {
+    return this.http.post<Response>(
+      "http://hcp.enterskull.com:9002/admin/post-job",
+      {
+        jobData,
+      }
+    );
+  }
+}

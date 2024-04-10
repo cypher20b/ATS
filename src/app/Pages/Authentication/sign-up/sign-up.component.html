@@ -21,7 +21,12 @@
       </div>
     </div>
     <div class="right-bar">
-      <form action="" method="post">
+      <form
+        action=""
+        [formGroup]="adminRegister"
+        #registerAdmin="ngForm"
+        (ngSubmit)="onSubmit(registerAdmin)"
+      >
         <div class="input-forms">
           <div class="input-heading">
             <h3 class="form-name">Sign Up</h3>
@@ -39,6 +44,7 @@
                   id="firstname"
                   name="firstname"
                   placeholder="John"
+                  formControlName="firstName"
                 />
               </div>
               <div class="lastname-div">
@@ -49,6 +55,7 @@
                   id="lastname"
                   name="lastname"
                   placeholder="Doe"
+                  formControlName="lastName"
                 />
               </div>
             </div>
@@ -60,6 +67,7 @@
                 id="email"
                 name="email"
                 placeholder="name@example.com"
+                formControlName="email"
               />
             </div>
             <div class="mb-3">
@@ -70,6 +78,7 @@
                   name="password"
                   id="password"
                   placeholder="Enter your password"
+                  formControlName="password"
                 />
                 <button type="button" mat-icon-button (click)="hide = !hide">
                   <mat-icon>{{
@@ -86,6 +95,7 @@
                 id="phone"
                 name="phone"
                 placeholder="+2332525252"
+                formControlName="phone"
               />
             </div>
             <div class="mb-3 d-flex justify-content-between">
@@ -97,6 +107,7 @@
                   id="department"
                   name="department"
                   placeholder="Management"
+                  formControlName="department"
                 />
               </div>
               <div class="role-div">
@@ -107,6 +118,7 @@
                   id="specialty"
                   name="specialty"
                   placeholder="Angular"
+                  formControlName="specialty"
                 />
               </div>
             </div>
@@ -115,7 +127,11 @@
             <mat-checkbox class="remember-me">Remember Me</mat-checkbox>
             <a class="forget-password">Forgotten Password</a>
           </div>
-          <a class="form-control signup-button">Sign Up</a>
+          <a
+            class="form-control signup-button"
+            (click)="onSubmit(registerAdmin)"
+            >Sign Up</a
+          >
           <div class="already-member">
             Already have an Account? <a [routerLink]="['/login']">Log In</a>
           </div>

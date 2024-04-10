@@ -89,3 +89,16 @@ label{
     border-bottom-left-radius: 3rem !important;
 }
 
+mat-slide-toggle {
+  margin-right: 1rem;
+
+}
+.submit-btn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  button{
+    background-color: #888dea;
+    color: #fff
+  }
+}
