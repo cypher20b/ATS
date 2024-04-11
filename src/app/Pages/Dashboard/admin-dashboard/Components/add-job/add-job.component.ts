@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { DatePipe } from "@angular/common";
 import {
   FormControl,
   FormGroup,
@@ -17,6 +18,7 @@ import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { CKEditorModule } from "@ckeditor/ckeditor5-angular";
 import { ApiService } from "../../../../../Services/api.service";
 import { Title } from "@angular/platform-browser";
+import { CommonModule } from "@angular/common";
 
 interface Job {
   value: string;
@@ -35,6 +37,7 @@ interface Job {
     CKEditorModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
+    CommonModule,
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: "./add-job.component.html",
@@ -83,32 +86,48 @@ export class AddJobComponent {
     if (!form.valid) {
       return;
     }
-    const jobData = {
-      Title: form.value.jobTitle,
-      Description: form.value.jobDescription,
-      Company: form.value.jobCompanyName,
-      Location: form.value.jobLocation,
-      Category: form.value.jobCategory,
-      EmploymentType: form.value.jobEmploymentType,
-      Salary: form.value.jobSalary,
-      Requirements: form.value.jobRequirements,
-      Responsibilities: form.value.jobResponsibilities,
-      PostedDate: new Date(form.value.jobPostedDate),
-      ExpiryDate: new Date(form.value.jobExpiryDate),
-      ContactEmail: form.value.jobContactEmail,
-      ContactPhone: form.value.jobContactPhone,
-      IsActive: form.value.jobActive,
-    };
 
-    console.log(form.value);
-    console.log(jobData);
-    this.apiService.postJob(jobData).subscribe(
-      (resData) => {
-        console.log(resData);
-      },
-      (errorMessage) => {
-        console.log(errorMessage);
-      }
-    );
+    const Description = form.value.jobDescription;
+    const Title = form.value.jobTitle;
+    const Company = form.value.jobCompanyName;
+    const Location = form.value.jobLocation;
+    const Category = form.value.jobCategory;
+    const EmploymentType = form.value.jobEmploymentType;
+    const Salary = Number(form.value.jobSalary);
+    const Requirements = form.value.jobRequirements;
+    const Responsibilities = form.value.jobResponsibilities;
+    const PostedDate = new Date(form.value.jobExpiryDate);
+    const ExpiryDate = new Date(form.value.jobExpiryDate);
+    const ContactEmail = form.value.jobContactEmail;
+    const ContactPhone = form.value.jobContactPhone;
+    const IsActive = 1;
+
+    console.log(PostedDate);
+
+    // this.apiService
+    //   .postJob(
+    //     Title,
+    //     Description,
+    //     Company,
+    //     Location,
+    //     Category,
+    //     EmploymentType,
+    //     Salary,
+    //     Requirements,
+    //     Responsibilities,
+    //     PostedDate,
+    //     ExpiryDate,
+    //     ContactEmail,
+    //     ContactPhone,
+    //     IsActive
+    //   )
+    //   .subscribe(
+    //     (resData) => {
+    //       console.log(resData);
+    //     },
+    //     (errorMessage) => {
+    //       console.log(errorMessage);
+    //     }
+    //   );
   }
 }

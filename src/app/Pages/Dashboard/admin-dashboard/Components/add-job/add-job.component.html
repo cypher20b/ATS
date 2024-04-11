@@ -83,16 +83,8 @@
           <mat-form-field appearance="outline" class="for-margin">
             <mat-label>Enter a date range</mat-label>
             <mat-date-range-input [rangePicker]="picker">
-              <input
-                matStartDate
-                placeholder="Start date"
-                formControlName="jobPostedDate"
-              />
-              <input
-                matEndDate
-                placeholder="End date"
-                formControlName="jobExpiryDate"
-              />
+              <input matStartDate placeholder="Start date" />
+              <input matEndDate placeholder="End date" />
             </mat-date-range-input>
             <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle
@@ -101,6 +93,27 @@
             ></mat-datepicker-toggle>
             <mat-date-range-picker #picker></mat-date-range-picker>
           </mat-form-field>
+
+          <div class="bt-ddate d-flex">
+            <div class="start form-control">
+              <label for="startDate">Start</label>
+              <input
+                type="date"
+                name="startDate"
+                id=""
+                formControlName="jobPostedDate"
+              />
+            </div>
+            <div class="end form-control">
+              <label for="endDate">Start</label>
+              <input
+                type="date"
+                name="endDate"
+                id=""
+                formControlName="jobExpiryDate"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

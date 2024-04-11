@@ -47,11 +47,39 @@ export class ApiService {
       }
     );
   }
-  postJob(jobData: any) {
+  postJob(
+    Title: string,
+    Description: string,
+    Company: string,
+    Location: string,
+    Category: string,
+    EmploymentType: string,
+    Salary: number,
+    Requirements: string,
+    Responsibilities: string,
+    PostedDate: Date,
+    ExpiryDate: Date,
+    ContactEmail: string,
+    ContactPhone: string,
+    IsActive: number
+  ) {
     return this.http.post<Response>(
       "http://hcp.enterskull.com:9002/admin/post-job",
       {
-        jobData,
+        Title,
+        Description,
+        Company,
+        Location,
+        Category,
+        EmploymentType,
+        Salary,
+        Requirements,
+        Responsibilities,
+        PostedDate,
+        ExpiryDate,
+        ContactEmail,
+        ContactPhone,
+        IsActive,
       }
     );
   }
