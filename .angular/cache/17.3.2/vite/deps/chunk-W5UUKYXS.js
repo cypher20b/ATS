@@ -1,7 +1,7 @@
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-RPIBZEG5.js";
+} from "./chunk-3SYDT4M4.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
@@ -76,7 +76,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-AYX6XRY7.js";
+} from "./chunk-VSLTNGOT.js";
 import {
   __spreadProps,
   __spreadValues
@@ -5133,6 +5133,13 @@ var _MatInternalFormField = __MatInternalFormField;
 })();
 
 export {
+  coerceBooleanProperty,
+  coerceNumberProperty,
+  _isNumberValue,
+  coerceArray,
+  coerceCssPixelValue,
+  coerceElement,
+  coerceStringArray,
   Platform,
   getSupportedInputTypes,
   normalizePassiveListenerOptions,
@@ -5142,6 +5149,8 @@ export {
   _getFocusedElementPierceShadowDom,
   _getEventTarget,
   _isTestEnvironment,
+  Directionality,
+  BidiModule,
   BACKSPACE,
   ENTER,
   ESCAPE,
@@ -5156,16 +5165,11 @@ export {
   DOWN_ARROW,
   A,
   hasModifierKey,
-  coerceBooleanProperty,
-  coerceNumberProperty,
-  coerceArray,
-  coerceCssPixelValue,
-  coerceElement,
-  coerceStringArray,
   CdkObserveContent,
   ObserversModule,
   addAriaReferencedId,
   removeAriaReferencedId,
+  AriaDescriber,
   ActiveDescendantKeyManager,
   FocusKeyManager,
   InteractivityChecker,
@@ -5175,8 +5179,6 @@ export {
   FocusMonitor,
   CdkMonitorFocus,
   A11yModule,
-  Directionality,
-  BidiModule,
   VERSION2 as VERSION,
   AnimationCurves,
   AnimationDurations,
@@ -5223,4 +5225,4 @@ export {
   MatRippleLoader,
   _MatInternalFormField
 };
-//# sourceMappingURL=chunk-UMTWXQIW.js.map
+//# sourceMappingURL=chunk-W5UUKYXS.js.map

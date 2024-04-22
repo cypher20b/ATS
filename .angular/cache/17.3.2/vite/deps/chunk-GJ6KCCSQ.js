@@ -7,7 +7,7 @@ import {
   of,
   setClassMetadata,
   ɵɵdefineInjectable
-} from "./chunk-AYX6XRY7.js";
+} from "./chunk-VSLTNGOT.js";
 
 // node_modules/@angular/cdk/fesm2022/collections.mjs
 var DataSource = class {
@@ -34,6 +34,35 @@ var _ViewRepeaterOperation;
   _ViewRepeaterOperation2[_ViewRepeaterOperation2["REMOVED"] = 3] = "REMOVED";
 })(_ViewRepeaterOperation || (_ViewRepeaterOperation = {}));
 var _VIEW_REPEATER_STRATEGY = new InjectionToken("_ViewRepeater");
+var _DisposeViewRepeaterStrategy = class {
+  applyChanges(changes, viewContainerRef, itemContextFactory, itemValueResolver, itemViewChanged) {
+    changes.forEachOperation((record, adjustedPreviousIndex, currentIndex) => {
+      let view;
+      let operation;
+      if (record.previousIndex == null) {
+        const insertContext = itemContextFactory(record, adjustedPreviousIndex, currentIndex);
+        view = viewContainerRef.createEmbeddedView(insertContext.templateRef, insertContext.context, insertContext.index);
+        operation = _ViewRepeaterOperation.INSERTED;
+      } else if (currentIndex == null) {
+        viewContainerRef.remove(adjustedPreviousIndex);
+        operation = _ViewRepeaterOperation.REMOVED;
+      } else {
+        view = viewContainerRef.get(adjustedPreviousIndex);
+        viewContainerRef.move(view, currentIndex);
+        operation = _ViewRepeaterOperation.MOVED;
+      }
+      if (itemViewChanged) {
+        itemViewChanged({
+          context: view?.context,
+          operation,
+          record
+        });
+      }
+    });
+  }
+  detach() {
+  }
+};
 var _RecycleViewRepeaterStrategy = class {
   constructor() {
     this.viewCacheSize = 20;
@@ -367,10 +396,15 @@ var UniqueSelectionDispatcher = _UniqueSelectionDispatcher;
 })();
 
 export {
+  DataSource,
   isDataSource,
   ArrayDataSource,
+  _ViewRepeaterOperation,
   _VIEW_REPEATER_STRATEGY,
+  _DisposeViewRepeaterStrategy,
   _RecycleViewRepeaterStrategy,
-  SelectionModel
+  SelectionModel,
+  getMultipleValuesInSingleSelectionError,
+  UniqueSelectionDispatcher
 };
-//# sourceMappingURL=chunk-NNYCJPVH.js.map
+//# sourceMappingURL=chunk-GJ6KCCSQ.js.map

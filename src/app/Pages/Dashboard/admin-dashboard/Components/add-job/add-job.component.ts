@@ -96,38 +96,50 @@ export class AddJobComponent {
     const Salary = Number(form.value.jobSalary);
     const Requirements = form.value.jobRequirements;
     const Responsibilities = form.value.jobResponsibilities;
-    const PostedDate = new Date(form.value.jobExpiryDate);
-    const ExpiryDate = new Date(form.value.jobExpiryDate);
+    const PostedDate = new Date(form.value.jobPostedDate).toLocaleDateString(
+      "en-CA"
+    );
+    const ExpiryDate = new Date(form.value.jobExpiryDate).toLocaleDateString(
+      "en-CA"
+    );
     const ContactEmail = form.value.jobContactEmail;
     const ContactPhone = form.value.jobContactPhone;
-    const IsActive = 1;
+    const IsActive = form.value.jobActive;
 
-    console.log(PostedDate);
+    console.log(IsActive);
 
-    // this.apiService
-    //   .postJob(
-    //     Title,
-    //     Description,
-    //     Company,
-    //     Location,
-    //     Category,
-    //     EmploymentType,
-    //     Salary,
-    //     Requirements,
-    //     Responsibilities,
-    //     PostedDate,
-    //     ExpiryDate,
-    //     ContactEmail,
-    //     ContactPhone,
-    //     IsActive
-    //   )
-    //   .subscribe(
-    //     (resData) => {
-    //       console.log(resData);
-    //     },
-    //     (errorMessage) => {
-    //       console.log(errorMessage);
-    //     }
-    //   );
+    this.apiService
+      .postJob(
+        Title,
+        Description,
+        Company,
+        Location,
+        Category,
+        EmploymentType,
+        Salary,
+        Requirements,
+        Responsibilities,
+        PostedDate,
+        ExpiryDate,
+        ContactEmail,
+        ContactPhone,
+        IsActive
+      )
+      .subscribe(
+        (resData) => {
+          console.log(resData);
+        },
+        (errorMessage) => {
+          console.log(errorMessage);
+        }
+      );
+  }
+
+  buttonThis() {
+    console.log("this is a button");
+  }
+
+  divThis() {
+    console.log("this is a div");
   }
 }

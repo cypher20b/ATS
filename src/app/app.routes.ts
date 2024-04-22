@@ -4,6 +4,7 @@ import { AddJobComponent } from "./Pages/Dashboard/admin-dashboard/Components/ad
 import { ApplicantsListComponent } from "./Pages/Dashboard/admin-dashboard/Components/applicants-list/applicants-list.component";
 import { SignUpComponent } from "./Pages/Authentication/sign-up/sign-up.component";
 import { LoginComponent } from "./Pages/Authentication/login/login.component";
+import { JobListComponent } from "./Pages/Dashboard/admin-dashboard/Components/job-list/job-list.component";
 
 export const routes: Routes = [
   {
@@ -13,6 +14,7 @@ export const routes: Routes = [
       { path: "", component: ApplicantsListComponent },
       { path: "new-application", component: AddJobComponent },
       { path: "applicants", component: ApplicantsListComponent },
+      { path: "jobs", component: JobListComponent },
     ],
   },
   { path: "", component: LoginComponent },

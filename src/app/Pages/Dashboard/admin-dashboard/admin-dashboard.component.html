@@ -77,7 +77,9 @@
             </button>
           </div>
           <mat-list-item>
-            <button mat-button><mat-icon>home</mat-icon> Home</button>
+            <button mat-button [routerLink]="['jobs']">
+              <mat-icon>home</mat-icon> Home
+            </button>
           </mat-list-item>
           <mat-list-item>
             <button mat-button><mat-icon>explore</mat-icon> Slider</button>
