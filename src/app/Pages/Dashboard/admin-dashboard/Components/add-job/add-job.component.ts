@@ -106,8 +106,6 @@ export class AddJobComponent {
     const ContactPhone = form.value.jobContactPhone;
     const IsActive = form.value.jobActive;
 
-    console.log(IsActive);
-
     this.apiService
       .postJob(
         Title,
@@ -133,13 +131,5 @@ export class AddJobComponent {
           console.log(errorMessage);
         }
       );
-  }
-
-  buttonThis() {
-    console.log("this is a button");
-  }
-
-  divThis() {
-    console.log("this is a div");
   }
 }

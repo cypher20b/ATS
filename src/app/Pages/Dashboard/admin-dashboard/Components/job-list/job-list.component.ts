@@ -10,6 +10,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDialog, MatDialogModule } from "@angular/material/dialog";
 import { JobDetailsComponent } from "./job-details/job-details.component";
+import { MatMenuModule } from "@angular/material/menu";
 
 @Component({
   selector: "app-job-list",
@@ -22,6 +23,7 @@ import { JobDetailsComponent } from "./job-details/job-details.component";
     MatIconModule,
     MatButtonModule,
     MatDialogModule,
+    MatMenuModule,
   ],
   templateUrl: "./job-list.component.html",
   styleUrl: "./job-list.component.scss",
@@ -45,7 +47,11 @@ export class JobListComponent {
   dataSource = new MatTableDataSource<JobList>();
   selection = new SelectionModel<JobList>(true, []);
   openDialog(e: JobInformation) {
-    const dialogRef = this.dialog.open(JobDetailsComponent, { data: e });
+    const dialogRef = this.dialog.open(JobDetailsComponent, {
+      data: e,
+      width: "800px",
+      height: "500px",
+    });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
@@ -84,8 +90,8 @@ export class JobListComponent {
   //   }`;
   // }
 
-  onDelete() {
-    this.apiService.deleteJob("id").subscribe(
+  onDelete(JobID: number) {
+    this.apiService.deleteJob(JobID).subscribe(
       (resData) => {
         console.log(resData);
       },

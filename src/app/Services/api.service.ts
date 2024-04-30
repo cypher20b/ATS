@@ -142,7 +142,7 @@ export class ApiService {
     return this.http.get(`http://hcp.enterskull.com:9002/admin/job`);
   }
 
-  deleteJob(id: string) {
+  deleteJob(id: number) {
     return this.http.delete<Response>(
       `http://hcp.enterskull.com:9002/admin/job/${id}`
     );

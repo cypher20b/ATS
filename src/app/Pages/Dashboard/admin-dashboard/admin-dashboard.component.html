@@ -13,9 +13,12 @@
         mat-icon-button
         class="example-icon favorite-icon"
         [routerLink]="['applicants']"
+        routerLinkActive="active"
       >
         <mat-icon>receipt_long</mat-icon>
       </button>
+      <div class="icon-name">PMs</div>
+
       <span class="example-spacer"></span>
       <button mat-icon-button class="example-icon favorite-icon">
         <mat-icon>favorite</mat-icon>
@@ -71,15 +74,13 @@
     <mat-drawer-container autosize>
       <mat-drawer #drawer opened="false" mode="side" position="start">
         <mat-nav-list>
-          <div class="customize-btn">
+          <div class="">
             <button mat-button [routerLink]="['new-application']">
-              <mat-icon>edit</mat-icon> Customize
+              <mat-icon>add_box</mat-icon> New Job
             </button>
           </div>
-          <mat-list-item>
-            <button mat-button [routerLink]="['jobs']">
-              <mat-icon>home</mat-icon> Home
-            </button>
+          <mat-list-item [routerLink]="['jobs']" routerLinkActive="active2">
+            <button mat-button><mat-icon>home</mat-icon> Home</button>
           </mat-list-item>
           <mat-list-item>
             <button mat-button><mat-icon>explore</mat-icon> Slider</button>

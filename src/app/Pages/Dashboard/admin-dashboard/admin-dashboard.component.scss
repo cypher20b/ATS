@@ -8,9 +8,11 @@
         width: 5rem;
         display: flex;
         flex-direction: column;
-        background-color: #1f26a8;
+        background-color: #999EF4;
         color: #fff;
         padding-top: 1rem;
+      
+    
     
     }
     
@@ -117,7 +119,7 @@ mat-list-item{
 }
 
 ::ng-deep .customize-btn{
-    background-color: #1f26a8;
+    background-color: #999EF4;
     padding: 0.5rem 1rem;
     margin-left: 0.75rem;
     border-radius: 10% / 50%;
@@ -150,3 +152,27 @@ mat-list-item{
     background: #BBBEEC;
     border-radius: 10px;
   }
+
+.active{
+   
+    background: #888dea;
+    border-radius: 10px;
+    
+  
+}
+.active2{
+    border: 1px solid;
+    border-radius: 30px;
+    // background: #ffff;
+    color: #0000;
+    z-index: 10;
+   
+}
+.icon-name{
+    font-size: 1rem;
+            
+}
+
+//  padding: 1rem;
+
+
