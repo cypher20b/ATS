@@ -1,0 +1,116 @@
+<div class="main-container d-flex">
+  <div class="side-bar">
+    <mat-toolbar class="side-toolbar">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+        (click)="drawer.toggle()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        [routerLink]="['applicants']"
+        routerLinkActive="active"
+      >
+        <mat-icon>
+          <span class="material-symbols-outlined"> group </span>
+        </mat-icon>
+      </button>
+
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
+  </div>
+  <div class="main-bar">
+    <div class="nav-main">
+      <nav class="navbar d-flex justify-content-between">
+        <div class="application-name">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFqno-o15uF8Ewt3FiPFhfHFZXspX9y9teNZt-xvdNrfxVUGvoSoZgj0bnlcAtKWlPb88&usqp=CAU"
+              alt="Logo"
+              width="30"
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+        </div>
+        <div class="search-bar d-flex align-items-center">
+          <input
+            class="search-input"
+            type="text"
+            name=""
+            id=""
+            placeholder="Search"
+          />
+          <button mat-icon-button class="nav-search-icon">
+            <mat-icon>search</mat-icon>
+          </button>
+        </div>
+        <div class="user-info d-flex align-items-center">
+          <button mat-icon-button class="example-icon">
+            <mat-icon>settings</mat-icon>
+          </button>
+          <button mat-icon-button class="example-icon">
+            <mat-icon>apps</mat-icon>
+          </button>
+          <img
+            src="assets\images\dashboard-picture.jpg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+        </div>
+      </nav>
+    </div>
+    <mat-drawer-container autosize>
+      <mat-drawer #drawer opened="false" mode="side" position="start">
+        <mat-nav-list>
+          <mat-list-item
+            [routerLink]="['new-application']"
+            routerLinkActive="active2"
+          >
+            <button mat-button><mat-icon>add_box</mat-icon> New Job</button>
+          </mat-list-item>
+
+          <mat-list-item [routerLink]="['jobs']" routerLinkActive="active2">
+            <button mat-button>
+              <mat-icon>view_list</mat-icon>List of Jobs
+            </button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>explore</mat-icon> Slider</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>table</mat-icon> Table</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>settings</mat-icon> Settings</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>help</mat-icon> Help</button>
+          </mat-list-item>
+          <mat-list-item>
+            <button mat-button><mat-icon>analytics</mat-icon> Analytics</button>
+          </mat-list-item>
+        </mat-nav-list>
+      </mat-drawer>
+      <mat-drawer-content>
+        <div class="content-div">
+          <div class="content">
+            <router-outlet />
+          </div>
+        </div>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+</div>

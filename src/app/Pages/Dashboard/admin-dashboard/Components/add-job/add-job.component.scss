@@ -1,0 +1,113 @@
+.main-container{
+    
+    .left-form{
+      margin: 1rem;
+      width: 50%;
+      .new-application-heading{
+        color: var(--Colors-Primary-Slate-700, #3D4A5C);
+        font-family: Lexend;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px;
+
+      }
+    }
+    .right-form{
+      width: 50%;      
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .example-form, .select-form {        
+        width: 100%;
+      }
+      
+      .full-width, .date {
+        width: 100%;
+      }
+     
+     .for-margin{
+     width: 48%;
+    
+     }
+}
+
+::ng-deep .ck-content {
+  height: 6.3rem;
+  // height: 20rem;
+}
+label{
+  color: #b0b0b0;
+}
+.job-description{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+}
+.contact{
+  margin-left: 1.5rem;
+ }
+ .requirements{
+  margin-bottom: 1.5rem;
+ }
+ .form-control{
+  border-radius: 16px;
+  border: 1px solid  #9AA8BC;
+}
+.contact-infomation{
+  margin-top: 1rem;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper{
+  height: 2.5rem !important;
+  top: 0 !important;
+}
+
+
+
+::ng-deep .mdc-notched-outline__trailing{
+  border-radius: 0 1.1rem 1.1rem 0;
+}
+.mdc-notched-outline__leading{
+  border-radius: 3rem 0 0 3rem;
+}
+
+::ng-deep .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 1.1rem !important;
+    border-bottom-right-radius: 1.1rem !important;
+    border-bottom-left-radius: 0 !important;
+}
+::ng-deep .mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading {
+    border-top-left-radius: 3rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 3rem !important;
+}
+
+mat-slide-toggle {
+  margin-right: 1rem;
+
+}
+.submit-btn{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  button{
+    background-color: #888dea;
+    color: #fff
+  }
+}
+
+.for-test{
+  width: 6rem;
+  height: 5rem;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
