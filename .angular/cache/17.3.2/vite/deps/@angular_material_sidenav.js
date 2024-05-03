@@ -4,7 +4,6 @@ import {
   ScrollDispatcher,
   ViewportRuler
 } from "./chunk-MY5EXCSG.js";
-import "./chunk-G3XFTGSQ.js";
 import {
   animate,
   state,
@@ -12,6 +11,7 @@ import {
   transition,
   trigger
 } from "./chunk-7FP6MTOC.js";
+import "./chunk-G3XFTGSQ.js";
 import {
   Directionality,
   ESCAPE,
